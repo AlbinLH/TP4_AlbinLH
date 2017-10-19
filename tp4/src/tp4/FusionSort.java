@@ -11,13 +11,14 @@ public class FusionSort {
 		}
 	}
 
-	public static void triFusion(int tableau[], int debut, int fin) {
+	public static int[] triFusion(int tableau[], int debut, int fin) {
 		if (debut != fin) {
 			int milieu = (fin + debut) / 2;
 			triFusion(tableau, debut, milieu);
 			triFusion(tableau, milieu + 1, fin);
 			fusion(tableau, debut, milieu, fin);
 		}
+		return(tableau);
 	}
 
 	public static void fusion(int tableau[], int debut1, int fin1, int fin2) {
